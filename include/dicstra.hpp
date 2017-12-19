@@ -8,7 +8,7 @@ class dicstra
 {
 public:
 	dicstra();
-	dicstra(std::ifstream);
+	dicstra(std::ifstream&);
 	~dicstra();
 	void compute();
 	void print();
