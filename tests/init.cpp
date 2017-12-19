@@ -3,7 +3,7 @@
 
 
 SCENARIO("compute", "[compute]") {
-	ofstream fout("f2.txt");
+	std::ofstream fout("f2.txt");
 	fout << "6";
 	fout << "0 7 9 0 0 14";
 	fout << "7 0 10 15 0 0";
