@@ -11,7 +11,7 @@ SCENARIO("compute", "[compute]") {
 	fout << "9 10 0 11 0 2" << std::endl;
 	fout << "0 15 11 0 6 0" << std::endl;
 	fout << "0 0 0 6 0 9" << std::endl;
-	fout << "14 0 2 0 9 0" << std::endl;
+	fout << "14 0 2 0 9 0" ;
 	fout.close();
 	dicstra init(std::ifstream("f2.txt"));
 	double hold;
