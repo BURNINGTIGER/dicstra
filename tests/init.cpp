@@ -6,5 +6,5 @@ SCENARIO("compute", "[compute]") {
 	double hold;
 	init.compute();
 	hold = init.show();
-	REQUIRE(hold == [11]);
+	REQUIRE(hold == 11);
 }
