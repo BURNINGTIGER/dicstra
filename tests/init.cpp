@@ -2,7 +2,7 @@
 #include <catch.hpp>
 
 SCENARIO("compute", "[compute]") {
-	simplex init(std::ifstream("f1.txt"));
+	dicstra init(std::ifstream("f1.txt"));
 	double hold;
 	init.compute();
 	hold = init.show();
