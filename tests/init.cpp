@@ -16,5 +16,5 @@ SCENARIO("compute", "[compute]") {
 	dicstra init(std::ifstream("f2.txt"));
 	init.compute();
 	double hold[6] = { 0, 7, 9, 20, 20, 11 };
-	REQUIRE(a.compare(hold));
+	REQUIRE(init.compare(hold));
 }
