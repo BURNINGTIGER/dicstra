@@ -16,7 +16,7 @@ matrix:
 #          compiler: clang
         - os: linux
           compiler: gcc
-          env: COMPILER_NAME=gcc CXX=g++-5.4 CC=gcc-5.4
+          env: COMPILER_NAME=gcc CXX=g++-6 CC=gcc-6
           addons:
             apt:
                 packages:
@@ -25,7 +25,7 @@ matrix:
                 sources: *sources
         - os: linux
           compiler: gcc
-          env: COMPILER_NAME=gcc CXX=g++-6 CC=gcc-6
+          env: COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
           addons:
             apt:
                 packages:
