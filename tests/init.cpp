@@ -33,8 +33,8 @@ SCENARIO("compute2", "[compute2]") {
 	fout << "6 0 0 6 5 0 0 0 0 3" << std::endl;
 	fout << "0 5 1 3 4 0 5 5 3 0" ;
 	fout.close();
-	dicstra init(std::ifstream("f3.txt"));
+	dicstra init1(std::ifstream("f3.txt"));
 	init.compute();
-	double hold[10] = { 0, 1, 2, 2, 3, 4, 4, 4, 6, 4 };
-	REQUIRE(init.compare(hold));
+	double hold1[10] = { 0, 1, 3, 2, 3, 4, 4, 4, 6, 4 };
+	REQUIRE(init1.compare(hold));
 }
