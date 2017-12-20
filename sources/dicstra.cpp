@@ -7,7 +7,7 @@ dicstra::dicstra()
 	min_length = nullptr;
 }
 
-dicstra::dicstra(std::ifstream&  input)
+dicstra::dicstra(std::ifstream  input)
 {
 	if (!input)
 	{
