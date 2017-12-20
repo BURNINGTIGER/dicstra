@@ -7,7 +7,7 @@ dicstra::dicstra()
 	min_length = nullptr;
 }
 
-dicstra::dicstra(std::ifstream input)
+dicstra::dicstra(std::ifstream&  input)
 {
 	if (!input)
 	{
@@ -54,7 +54,7 @@ void dicstra::compute()
 		passed[i] = 1;
 	}
 	do {
-		minindex = 10000;
+		minindex = -1;
 		min = 10000;
 
 		for (int i = 0; i<graf_num; i++)
@@ -65,7 +65,7 @@ void dicstra::compute()
 				minindex = i;
 			}
 		}
-		if (minindex != 10000)
+		if (minindex != -1)
 		{
 			for (int i = 0; i<graf_num; i++)
 			{
@@ -78,7 +78,7 @@ void dicstra::compute()
 			}
 			passed[minindex] = 0;
 		}
-	} while (minindex < 10000);
+	} while (minindex > -1);
 }
 
 void dicstra::print()
@@ -87,7 +87,11 @@ void dicstra::print()
 		std::cout << min_length[i] << " ";
 }
 
-double dicstra::show(){
-	return min_length[graf_num - 1];
+bool dicstra::compare(double * result){
+	bool same = true;
+	for (int i = 0; i < graf_num; i++)
+	if (min_length[i]!=result[i])
+		same = false;
+	return same;
 }
 
