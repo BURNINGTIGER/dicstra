@@ -12,7 +12,7 @@ public:
 	~dicstra();
 	void compute();
 	void print();
-	double show();
+	bool compare(double *);
 private:
 	double **length;
 	int graf_num;
