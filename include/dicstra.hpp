@@ -17,4 +17,5 @@ private:
 	double **length;
 	int graf_num;
 	double *min_length;
+	double max;
 };
