@@ -9,6 +9,7 @@ dicstra::dicstra()
 
 dicstra::dicstra(std::ifstream  input)
 {
+	max = 0;
 	if (!input)
 	{
 		throw std::logic_error("Error! File not found!");
@@ -18,9 +19,7 @@ dicstra::dicstra(std::ifstream  input)
 	length = new double*[graf_num];
 	for (int i = 0; i < graf_num; i++)
 	{
-
 		length[i] = new double[graf_num];
-		min_length[i] = 10000;
 	}
 
 	min_length[0] = 0;
@@ -30,7 +29,14 @@ dicstra::dicstra(std::ifstream  input)
 		for (int j = 0; j < graf_num; j++)
 		{
 			input >> length[i][j];
+			if (max < length[i][j]){
+				max = length[i][j];
+			}
 		}
+	}
+	for (int i = 0; i < graf_num; i++)
+	{
+		min_length[i] = max;;
 	}
 }
 
@@ -55,7 +61,7 @@ void dicstra::compute()
 	}
 	do {
 		minindex = -1;
-		min = 10000;
+		min = max;
 
 		for (int i = 0; i<graf_num; i++)
 		{
