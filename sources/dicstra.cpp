@@ -30,7 +30,7 @@ dicstra::dicstra(std::ifstream  input)
 		{
 			input >> length[i][j];
 			if (max < length[i][j]){
-				max = length[i][j];
+				max = length[i][j] + 1;
 			}
 		}
 	}
